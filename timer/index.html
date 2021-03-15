@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="style/timer.css">
+    <link href='https://fonts.googleapis.com/css?family=Permanent+Marker|Montez|Lobster|Josefin+Sans|Shadows+Into+Light|Pacifico|Amatic+SC:700|Orbitron:400,900|Rokkitt|Righteous|Dancing+Script:700|Bangers|Chewy|Sigmar+One|Architects+Daughter|Abril+Fatface|Covered+By+Your+Grace|Kaushan+Script|Gloria+Hallelujah|Satisfy|Lobster+Two:700|Comfortaa:700|Cinzel|Courgette'
+        rel='stylesheet' type='text/css'>
+    <title>Countdown Overlay Generator</title>
+</head>
+
+<body style="background-color: grey;">
+
+    <div id="wrapper">
+        <form id="form" action="overlay.html" method="get">
+            <center>
+                <h3 id="title">Countdown Overlay Generator</h1>
+            </center>
+            <div id="d1">
+                <center>
+                    <canvas id="cv" style="background-color: whitesmoke;border: 4px ridge #1C6EA4;
+                    border-radius: 10px 10px 10px 10px;"> </canvas>
+                </center>
+            </div>
+            <center>
+                <label for="min" onchange="setTime()">Time: </label>
+                <input id="min" name="min" value="5" type="number" style='z-index:2'>
+                <label for="second" onchange="setTime()">:</label>
+                <input id="second" name="sec" value="00" type="number" style='z-index:2'>
+
+                <label for="fontsize">Size: </label>
+                <input id="fontsize" name="fontsize" type="range" min="12" , value="86" , max="288">
+
+                <label for="select">Font: </label>
+                <select id="select" name="font" onChange="return fontChange();"></select>
+
+                <label for="color">Color: </label>
+                <input type="color" id="color" name="color" onChange="return colorChange();">
+
+                <input type="submit" value="Get Overlay">
+            </center>
+        </form>
+    </div>
+    <script src="index.js">
+    </script>
+</body>
